@@ -1,0 +1,231 @@
+.form {
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    .form-control {
+        padding: 13px 0 14px 0;
+        width: 100%;
+        color: $input-color;
+        font-family: $font-primary;
+        font-size: 1rem;
+        border-bottom: 1px solid #d5d5d5;
+        background: transparent;
+        transition: all 0.275s;
+        &:focus {
+            border-bottom-color: #242221;
+        }
+        &::placeholder {
+            color: #242221;
+        }
+    }
+    .form-group,
+    .options-group {
+        margin: 0 auto 20px auto;
+        width: grid-span(10);
+    }
+    .checkbox-group {
+        margin-bottom: 20px;
+        label {
+            font-size: 0.8125rem;
+            font-family: $font-book;
+            line-height: 1.3125rem;
+        }
+    }
+    p {
+        margin-bottom: 24px;
+        font-size: 0.8125rem;
+        font-family: $font-book;
+        line-height: 1.3125rem;
+    }
+    .information {
+        margin-bottom: 48px;
+    }
+    button {
+        margin: 48px auto 0 auto;
+        display: block;
+        cursor: pointer;
+    }
+}
+.contact-form {
+    margin: 0 auto;
+    width: grid-span(6);
+}
+
+/* SELECT */
+
+.options-group {
+    padding-left: 50px;
+    position: relative;
+    user-select: none;
+    .default {
+        margin: 0;
+        padding: 0;
+        height: 145px;
+        border: 1px solid #d5d5d5;
+        position: relative;
+        cursor: pointer;
+        list-style-type: none;
+        li {
+            padding: 3px 40px 3px 0;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 65px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid;
+            border-color: transparent transparent #000000 #000000;
+            transform: rotate(-45deg);
+            transition: all 0.275s;
+        }
+    }
+    .select {
+        margin: 20px 0 0 0;
+        padding-left: 50px;
+        position: absolute;
+        top: 145px;
+        left: 0;
+        width: 100%;
+        display: none;
+        list-style-type: none;
+        z-index: $zindex-margin;
+        li {
+            padding: 3px 40px 3px 0;
+            cursor: pointer;
+            background: #f5f5f5;
+            border-top: 1px solid #d5d5d5;
+            border-right: 1px solid #d5d5d5;
+            border-left: 1px solid #d5d5d5;
+            transition: all 0.275s;
+            &:last-child {
+                border-bottom: 1px solid #d5d5d5;
+            }
+            &:hover {
+                background: #d5d5d5;
+            }
+        }
+    }
+    .option {
+        display: flex;
+        align-items: center;
+        .icon {
+            margin-right: -4px;
+            margin-left: -50px;
+            width: 306px;
+            height: 139px;
+        }
+        p {
+            margin: 0;
+            font-family: $font-primary;
+            font-size: 1rem;
+            line-height: 1.3125rem;
+        }
+        &.formentor .icon {
+            background: url('../images/select_cupra-formentor.png') no-repeat 0 0;
+        }
+        &.leon .icon {
+            background: url('../images/select_cupra-leon.png') no-repeat 0 0;
+        }
+        &.leonsportstourer .icon {
+            background: url('../images/select_cupra-leon-sportstourer.png') no-repeat 0 0;
+        }
+        &.ateca .icon {
+            background: url('../images/select_cupra-ateca.png') no-repeat 0 0;
+        }
+        &.born .icon {
+            background: url('../images/select_cupra-born.png') no-repeat 0 0;
+        }
+    }
+    &.active {
+        .select {
+            display: block;
+        }
+        .default {
+            &:before {
+                top: 70px;
+                transform: rotate(-225deg);
+            }
+        }
+    }
+}
+
+/* CHECKBOX */
+
+.form {
+    [type='checkbox']:not(:checked),
+    [type='checkbox']:checked {
+        position: absolute;
+        left: 0;
+        opacity: 0.01;
+
+        & + label {
+            position: relative;
+            padding-left: 32px;
+            display: inline-block;
+            cursor: pointer;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #d5d5d5;
+                background: #ffffff;
+                transition: all 0.275s;
+            }
+            &:after {
+                content: '✕';
+                position: absolute;
+                top: 0.525em;
+                left: 0.18em;
+                font-size: 1.375em;
+                color: #242221;
+                line-height: 0;
+                transition: all 0.2s;
+            }
+        }
+    }
+    [type='checkbox']:not(:checked) {
+        & + label {
+            &:after {
+                opacity: 0;
+                -webkit-transform: scale(0) rotate(45deg);
+                transform: scale(0) rotate(45deg);
+            }
+        }
+    }
+    [type='checkbox']:checked {
+        & + label {
+            &:after {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+        }
+    }
+    [type='checkbox']:disabled:not(:checked),
+    [type='checkbox']:disabled:checked {
+        & + label {
+            &:before {
+                box-shadow: none;
+                border-color: #bbbbbb;
+                background-color: #e9e9e9;
+            }
+        }
+    }
+    [type='checkbox']:disabled:checked + label:after {
+        color: #777777;
+    }
+    [type='checkbox']:disabled + label {
+        color: #aaaaaa;
+    }
+}

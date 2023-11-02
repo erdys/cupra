@@ -1,0 +1,24 @@
+.socialicons {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+        padding-right: 32px;
+        display: inline-block;
+        &:last-child {
+            padding-right: 0;
+        }
+        a {
+            img {
+                transition: all 0.275s;
+                opacity: 0.7;
+            }
+            &:hover,
+            &:focus {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
