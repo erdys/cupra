@@ -873,9 +873,6 @@ img {
   opacity: 1;
 }
 
-.section-contact {
-  margin-top: 6px;
-}
 .section-contact .hld-title {
   margin: 0 auto;
   width: calc(33.3333333333% - 21.3333333333px);
@@ -888,7 +885,6 @@ img {
 
 /* FOOTER */
 .footer-page {
-  margin-top: 17px;
   padding: 46px 0;
   background: #ffffff;
   border-top: 1px solid #d5d5d5;
