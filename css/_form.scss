@@ -122,6 +122,9 @@
             margin-left: -50px;
             width: 306px;
             height: 139px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            flex-shrink: 0;
         }
         p {
             margin: 0;
@@ -130,19 +133,19 @@
             line-height: 1.3125rem;
         }
         &.formentor .icon {
-            background: url('../images/select_cupra-formentor.png') no-repeat 0 0;
+            background-image: url('../images/select_cupra-formentor.png');
         }
         &.leon .icon {
-            background: url('../images/select_cupra-leon.png') no-repeat 0 0;
+            background-image: url('../images/select_cupra-leon.png');
         }
         &.leonsportstourer .icon {
-            background: url('../images/select_cupra-leon-sportstourer.png') no-repeat 0 0;
+            background-image: url('../images/select_cupra-leon-sportstourer.png');
         }
         &.ateca .icon {
-            background: url('../images/select_cupra-ateca.png') no-repeat 0 0;
+            background-image: url('../images/select_cupra-ateca.png');
         }
         &.born .icon {
-            background: url('../images/select_cupra-born.png') no-repeat 0 0;
+            background-image: url('../images/select_cupra-born.png');
         }
     }
     &.active {

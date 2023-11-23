@@ -404,6 +404,9 @@ iframe {
   margin-left: -50px;
   width: 306px;
   height: 139px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
 }
 .options-group .option p {
   margin: 0;
@@ -412,19 +415,19 @@ iframe {
   line-height: 1.3125rem;
 }
 .options-group .option.formentor .icon {
-  background: url("../images/select_cupra-formentor.png") no-repeat 0 0;
+  background-image: url("../images/select_cupra-formentor.png");
 }
 .options-group .option.leon .icon {
-  background: url("../images/select_cupra-leon.png") no-repeat 0 0;
+  background-image: url("../images/select_cupra-leon.png");
 }
 .options-group .option.leonsportstourer .icon {
-  background: url("../images/select_cupra-leon-sportstourer.png") no-repeat 0 0;
+  background-image: url("../images/select_cupra-leon-sportstourer.png");
 }
 .options-group .option.ateca .icon {
-  background: url("../images/select_cupra-ateca.png") no-repeat 0 0;
+  background-image: url("../images/select_cupra-ateca.png");
 }
 .options-group .option.born .icon {
-  background: url("../images/select_cupra-born.png") no-repeat 0 0;
+  background-image: url("../images/select_cupra-born.png");
 }
 .options-group.active .select {
   display: block;
@@ -720,24 +723,20 @@ img {
 
 .section-intro .main-article {
   display: flex;
+  flex-direction: column;
+}
+.section-intro .main-article-gallery {
+  display: flex;
   justify-content: space-between;
 }
-.section-intro .main-article .col-1 {
-  -ms-flex: 0 0 calc(58.3333333333% - 13.3333333333px);
-  flex: 0 0 calc(58.3333333333% - 13.3333333333px);
-}
-.section-intro .main-article .col-2 {
-  -ms-flex: 0 0 calc(41.6666666667% - 18.6666666667px);
-  flex: 0 0 calc(41.6666666667% - 18.6666666667px);
-}
 .section-intro .main-article .hld-title {
-  width: 68%;
+  width: calc(41.6666666667% - 18.6666666667px);
 }
 .section-intro .main-article .hld-title--1 {
   margin-bottom: 68px;
 }
 .section-intro .main-article .hld-title--2 {
-  margin-top: 158px;
+  margin-top: -119px;
 }
 .section-intro .main-article .title {
   margin-bottom: 16px;
@@ -758,7 +757,7 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 .section-intro .main-article .hld-image--2 {
-  margin-top: 280px;
+  margin-top: 60px;
 }
 .section-intro .main-article figure figcaption {
   margin-top: 32px;
@@ -1035,7 +1034,6 @@ img {
   .options-group .option .icon {
     width: 150px;
     height: 48px;
-    background-size: contain !important;
   }
   .footer-page {
     padding: 12px 0;
@@ -1166,7 +1164,6 @@ img {
   .options-group .option .icon {
     width: 170px;
     height: 72px;
-    background-size: contain !important;
   }
   .footer-page {
     padding: 12px 0;

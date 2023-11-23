@@ -212,22 +212,18 @@ img {
 .section-intro {
     .main-article {
         display: flex;
-        justify-content: space-between;
-        .col-1 {
-            -ms-flex: 0 0 grid-span(7);
-            flex: 0 0 grid-span(7);
-        }
-        .col-2 {
-            -ms-flex: 0 0 grid-span(5);
-            flex: 0 0 grid-span(5);
+        flex-direction: column;
+        &-gallery {
+            display: flex;
+            justify-content: space-between;
         }
         .hld-title {
-            width: 68%;
+            width: grid-span(5);
             &--1 {
                 margin-bottom: 68px;
             }
             &--2 {
-                margin-top: 158px;
+                margin-top: -119px;
             }
         }
         .title {
@@ -249,8 +245,10 @@ img {
             color: rgba(255, 255, 255, 0.5);
         }
         .hld-image {
+            &--1 {
+            }
             &--2 {
-                margin-top: 280px;
+                margin-top: 60px;
             }
         }
         figure {
