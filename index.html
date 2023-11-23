@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cupra</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -153,22 +151,6 @@
                 <div class="arrow arrow-prev"><img src="images/icons/arrow-carousel-left.svg" alt="Strzałka w lewo" title="Poprzedni"></div>
                 <div class="arrow arrow-next"><img src="images/icons/arrow-carousel-right.svg" alt="Strzałka w prawo" title="Następny"></div>
             </div>
-            <script>
-                $(document).ready(function () {
-                    $('.carousel').slick({
-                        slide: 'li',
-                        dots: false,
-                        infinite: true,
-                        speed: 300,
-                        slidesToShow: 3,
-                        centerMode: true,
-                        variableWidth: true,
-                        autoplay: true,
-                        prevArrow: $('.arrow-prev'),
-                        nextArrow: $('.arrow-next')
-                    });
-                });
-            </script>
         </div>
     </section>
 
@@ -356,7 +338,6 @@
         });
 
     </script>
-    <script src="vendor/slick/slick.min.js"></script>
 </body>
 
 </html>
