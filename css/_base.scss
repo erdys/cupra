@@ -303,7 +303,7 @@ img {
 }
 
 .section-carousel {
-    .hld-carousel {
+    .swiper {
         position: relative;
     }
     .hld-arrow {
@@ -312,6 +312,7 @@ img {
         right: 50%;
         transform: translate(50%, -50%);
         width: 1066px;
+        z-index: $zindex-arrow;
     }
     .arrow {
         width: 50px;
@@ -320,18 +321,18 @@ img {
         position: absolute;
         top: 0;
         cursor: pointer;
-        &-prev {
+        &.swiper-arrow-prev {
             left: -25px;
         }
-        &-next {
+        &.swiper-arrow-next {
             right: -25px;
         }
     }
-    .carousel {
+    .swiper-wrapper {
         margin: 0;
         padding: 0;
     }
-    .carousel-item {
+    .swiper-slide {
         width: 1066px;
         text-align: center;
         .image {
@@ -363,9 +364,9 @@ img {
             }
         }
     }
-    .slick-slide {
+    .swiper-slide {
         opacity: 0.5;
-        &.slick-current {
+        &.swiper-slide-active {
             opacity: 1;
         }
     }

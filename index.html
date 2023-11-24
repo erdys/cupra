@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cupra</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -78,9 +80,9 @@
     </section>
 
     <section class="section-carousel bg-light-grey">
-        <div class="hld-carousel">
-            <ul class="carousel">
-                <li class="carousel-item">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
                     <h2 class="title">CUPRA Formentor</h2>
                     <img src="images/cupra-formentor.png" class="image" alt="" title="">
                     <p>Maksymalna prędkość: 204 KM/H Moc silnika: 150 KM</p>
@@ -91,7 +93,7 @@
                     </div>
                     <a href="#" class="btn btn-action">Umów jazdę próbną</a>
                 </li>
-                <li class="carousel-item">
+                <li class="swiper-slide">
                     <h2 class="title">CUPRA Formentor VZ</h2>
                     <img src="images/cupra-born.png" class="image" alt="" title="">
                     <p>Maksymalna prędkość: 250 KM/H Moc silnika: 310 KM</p>
@@ -102,7 +104,7 @@
                     </div>
                     <a href="#" class="btn btn-action">Umów jazdę próbną</a>
                 </li>
-                <li class="carousel-item">
+                <li class="swiper-slide">
                     <h2 class="title">CUPRA Ateca</h2>
                     <img src="images/cupra-ateca.png" class="image" alt="" title="">
                     <p>Maksymalna prędkość: 247 KM/H Moc silnika: 300 KM</p>
@@ -113,7 +115,7 @@
                     </div>
                     <a href="#" class="btn btn-action">Umów jazdę próbną</a>
                 </li>
-                <li class="carousel-item">
+                <li class="swiper-slide">
                     <h2 class="title">Nowa CUPRA Born</h2>
                     <img src="images/cupra-born.png" class="image" alt="" title="">
                     <p>Akumulator 58 kWh moc do 204 KM<sup>2</sup></p>
@@ -124,7 +126,7 @@
                     </div>
                     <a href="#" class="btn btn-action">Umów jazdę próbną</a>
                 </li>
-                <li class="carousel-item">
+                <li class="swiper-slide">
                     <h2 class="title">Leon</h2>
                     <img src="images/cupra-leon.png" class="image" alt="" title="">
                     <p>Maksymalna prędkość: 245 KM/H Moc silnika: 300 KM</p>
@@ -135,7 +137,7 @@
                     </div>
                     <a href="#" class="btn btn-action">Umów jazdę próbną</a>
                 </li>
-                <li class="carousel-item">
+                <li class="swiper-slide">
                     <h2 class="title">Leon Sportstourer</h2>
                     <img src="images/cupra-leon-sportstourer.png" class="image" alt="" title="">
                     <p>Maksymalna prędkość: 250 KM/H Moc silnika: 310 KM</p>
@@ -148,8 +150,8 @@
                 </li>
             </ul>
             <div class="hld-arrow">
-                <div class="arrow arrow-prev"><img src="images/icons/arrow-carousel-left.svg" alt="Strzałka w lewo" title="Poprzedni"></div>
-                <div class="arrow arrow-next"><img src="images/icons/arrow-carousel-right.svg" alt="Strzałka w prawo" title="Następny"></div>
+                <div class="arrow swiper-arrow-prev"><img src="images/icons/arrow-carousel-left.svg" alt="Strzałka w lewo" title="Poprzedni"></div>
+                <div class="arrow swiper-arrow-next"><img src="images/icons/arrow-carousel-right.svg" alt="Strzałka w prawo" title="Następny"></div>
             </div>
         </div>
     </section>
@@ -290,6 +292,7 @@
         </div>
     </section>
 
+
     <footer id="footer" class="footer-page">
         <div class="container">
             <p class="copyright">SEAT CUPRA S.A.U. 2022 &reg;</p>
@@ -305,6 +308,17 @@
     </footer>
 
     <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".swiper-arrow-next",
+                prevEl: ".swiper-arrow-prev",
+            },
+
+        });
+
         document.querySelectorAll(".default").forEach(function (e) {
             e.addEventListener("click", function () {
                 const parent = e.parentElement;
@@ -338,6 +352,8 @@
         });
 
     </script>
+
+
 </body>
 
 </html>

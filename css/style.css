@@ -805,7 +805,7 @@ img {
   margin-bottom: 0;
 }
 
-.section-carousel .hld-carousel {
+.section-carousel .swiper {
   position: relative;
 }
 .section-carousel .hld-arrow {
@@ -814,6 +814,7 @@ img {
   right: 50%;
   transform: translate(50%, -50%);
   width: 1066px;
+  z-index: 1050;
 }
 .section-carousel .arrow {
   width: 50px;
@@ -823,33 +824,33 @@ img {
   top: 0;
   cursor: pointer;
 }
-.section-carousel .arrow-prev {
+.section-carousel .arrow.swiper-arrow-prev {
   left: -25px;
 }
-.section-carousel .arrow-next {
+.section-carousel .arrow.swiper-arrow-next {
   right: -25px;
 }
-.section-carousel .carousel {
+.section-carousel .swiper-wrapper {
   margin: 0;
   padding: 0;
 }
-.section-carousel .carousel-item {
+.section-carousel .swiper-slide {
   width: 1066px;
   text-align: center;
 }
-.section-carousel .carousel-item .image {
+.section-carousel .swiper-slide .image {
   margin: 76px auto 38px auto;
 }
-.section-carousel .carousel-item .title {
+.section-carousel .swiper-slide .title {
   font-family: "CupraRegular", sans-serif;
   font-size: 3rem;
   line-height: 108%;
 }
-.section-carousel .carousel-item p {
+.section-carousel .swiper-slide p {
   font-family: "CupraLight", sans-serif;
   font-size: 0.875rem;
 }
-.section-carousel .carousel-item .item-details {
+.section-carousel .swiper-slide .item-details {
   margin: 48px auto;
   width: 50%;
   display: flex;
@@ -858,17 +859,17 @@ img {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.section-carousel .carousel-item .item-details .bold,
-.section-carousel .carousel-item .item-details strong {
+.section-carousel .swiper-slide .item-details .bold,
+.section-carousel .swiper-slide .item-details strong {
   display: block;
   font-family: "CupraMedium", sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
-.section-carousel .slick-slide {
+.section-carousel .swiper-slide {
   opacity: 0.5;
 }
-.section-carousel .slick-slide.slick-current {
+.section-carousel .swiper-slide.swiper-slide-active {
   opacity: 1;
 }
 
