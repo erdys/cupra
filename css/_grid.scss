@@ -21,5 +21,8 @@
     }
 }
 @function grid-span($span: 1, $columns: 12, $gap: 32px) {
-    @return calc((100% * $span / $columns) - ($gap * ($columns / $span - 1) / ($columns / $span)));
+    $span-percentage: calc(($span / $columns) * 100%);
+    $gap-adjustment: calc($gap * ($columns / $span - 1) / $columns);
+
+    @return calc($span-percentage - $gap-adjustment);
 }
