@@ -29,6 +29,9 @@
     .options-group {
         margin: 0 auto 20px auto;
         width: grid-span(10);
+        @include breakpoint(md, max) {
+            width: 90%;
+        }
     }
     .checkbox-group {
         margin-bottom: 20px;
@@ -55,7 +58,10 @@
 }
 .contact-form {
     margin: 0 auto;
-    width: grid-span(6);
+    width: 670px;
+    @include breakpoint(md, max) {
+        width: 100%;
+    }
 }
 
 /* SELECT */
@@ -87,6 +93,12 @@
             transform: rotate(-45deg);
             transition: all 0.275s;
         }
+        @include breakpoint(md, max) {
+            height: 50px;
+            &:before {
+                top: 17px;
+            }
+        }
     }
     .select {
         margin: 20px 0 0 0;
@@ -113,6 +125,9 @@
                 background: #d5d5d5;
             }
         }
+        @include breakpoint(md, max) {
+            top: 45px;
+        }
     }
     .option {
         display: flex;
@@ -125,6 +140,11 @@
             background-repeat: no-repeat;
             background-size: contain;
             flex-shrink: 0;
+            @include breakpoint(md, max) {
+                margin-right: 0;
+                width: 100px;
+                height: 42px;
+            }
         }
         p {
             margin: 0;
@@ -156,6 +176,11 @@
             &:before {
                 top: 70px;
                 transform: rotate(-225deg);
+            }
+            @include breakpoint(md, max) {
+                &:before {
+                    top: 23px;
+                }
             }
         }
     }
